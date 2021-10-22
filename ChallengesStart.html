@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Let's Go</title>
+	<link rel="stylesheet" href="ChallengesStart.css" />
+</head>
+<body>
+	<div id="-_-">
+	<div style="height:500px;width:90%;">
+		<img src="dices.png" id="i1" />
+		<h1 id="h1&Img" style="color:#e6be1e;font-family:fantasy;"><o>wait... 3</o><img src="wait.png" width="30px" /></h1>
+	</div>
+	<div id="o_o">
+		<button id="StartButton" onClick="SHOW()">Start</button>
+		<div id="StartDIV" algin="center">
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<h1>Click on Start Button to SHOW Program Data</h1>
+		</div>
+	</div>
+	<script>
+		let StudentsNames=[]
+		let ProgramData='<br /><br /><br /><br /><br /><textarea placeholder="Students Names" id="textarea"></textarea><button onClick="NextOrder(0)">Submit</button>'
+		let Random=0
+		const SHOW = () => {
+			StartDIV.innerHTML=ProgramData
+			console.log("Done")
+		}
+		const NextOrder = (a) => {
+			if(a==0) {
+			StudentsNames=document.querySelector("textarea").value.split("\n")/*.join(" ").split(" ")*/
+			}
+			console.log(StudentsNames)
+			if(StudentsNames.length===0) {
+				SHOW()
+			} else {
+			StartDIV.innerHTML="<br /><br /><br /><br /><br /><button onClick='RandomStudent()'>Random Student</button>"
+			}
+		}
+		const RandomStudent = () => {
+			Random=parseInt(Math.random()*(StudentsNames.length))
+			StartDIV.innerHTML=`<br /><br /><br /><br /><br /><h1 onClick='NextOrder(1)'>${StudentsNames[Random]}</h1>`
+			console.log(StudentsNames)
+			StudentsNames=StudentsNames.filter((value,index,arr)=>value!==StudentsNames[Random])
+		}
+	</script>
+	</div>
+	</div>
+	<script src="ChallengesStart.js"></script>
+</body>
+</html>

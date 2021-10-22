@@ -1,0 +1,81 @@
+body {
+	background-color: #021121;
+}
+
+header {
+	display: flex;
+}
+
+h1 {
+	margin: 50px;
+}
+
+button {
+	cursor: pointer;
+}
+
+#Start:hover {
+	  box-shadow: 5px 10px crimson;
+}
+
+#Go:hover {
+	  box-shadow: 5px 10px #e6b31e;
+}
+
+#Go {
+	margin-left: 50px;
+	padding: 20px;
+	font-size:20px;
+	background-color: transparent;
+	border: 1px solid #e6b31e;
+	color: #fec42c;
+	border-radius: 10px;
+}
+
+header h1,li {
+	color: #e6b31e;
+	font-family: sans-serif;
+}
+
+ul {
+	display: flex;
+	margin-left: 15%;
+}
+
+a {
+	color: #e6b31e;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+li {
+	list-style-type: none;
+	margin: 25px;
+	margin-top: 40px;
+}
+
+header button {
+	border-radius: 15px;
+	/*padding: 20px;*/
+	width: 120px;
+	height: 45px;
+	margin: 45px;
+	margin-left: 100px;
+	background-color: transparent;
+	color: crimson;
+	border: 2px solid crimson;
+	font-size: 20px;
+}
+
+#HurryUp {
+	font-family:sans-serif;
+	color: #4997d0;
+	width: 30%;
+}
+
+
+img {
+	width: 300px;
+	margin-left: 65%;
+	margin-top: -30%;
+}
